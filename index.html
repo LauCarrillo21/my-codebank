@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="atm.js"></script>
+
+    <title> 💵 My Code Bank 😄 </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+
+<body>
+    <main class="container">
+        <div>
+            <!-- PANEL INICIO SESION -->
+            <section id="inicioDeSesion" class="visible cajacentro container">
+                <div class="padre container">
+                    <h1> 💵 My Code Bank </h1>
+                    <div class="hijo container">
+                        <label for="usuario">User</label>
+                        <input id="usuario" type="text" name="usuario">
+                        <label for="contrasena">Password</label>
+                        <input id="contrasena" type="password" name="contrasena">
+                        <button onclick="iniciarSesion()" class="btn btn-outline-info"> Login </button>
+                    </div>
+                </div>
+            </section>
+            <!-- PANEL INICIO OPERACIONES CAJERO -->
+            <section id="inicioOperaciones" class="invisible cajacentro container">
+                <div class="padre container">
+                    <h1> 💵 My Code Bank </h1>
+                    <div class="hijo container">
+                        <h2> Choose an action... </h2>
+                        <div class="operaciones container">
+                            <button onclick='depositar()' class="btn btn-outline-light"> Add amount </button>
+                            <button onclick="saldo()" class="btn btn-outline-light"> Check balance </button>
+                            <button onclick="retirar()" class="btn btn-outline-light"> Withdraw amount </button>
+                            <button onclick="salir()" class=" btn btn-outline-danger"> Log Out</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PANEL INICIO DEPOSITO -->
+            <section id="inicioOperacionDeposito" class="invisible cajacentro container">
+                <div class="padre container">
+                    <h1>  💵 My Code Bank </h1>
+                    <div class="hijo container">
+                        <h2> Enter the amount to add... </h2>
+                        <div class="operaciones container">
+                            <label for=""></label>
+                            <input id="valorDeposito" type="number" placeholder="Enter the amount">
+                            <button onclick='cantidadDeposito()' class="btn btn-outline-light"> Add amount </button>
+                            <button onclick="salir()" class=" btn btn-outline-danger"> Log Out </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PANEL INICIO RETIRO -->
+            <section id="inicioOperacionRetiro" class="invisible cajacentro container">
+                <div class="padre container">
+                    <h1> 💵 My Code Bank </h1>
+                    <div class="hijo container">
+                        <h2> Enter the amount to withdraw :</h2>
+                        <div class="operaciones container">
+                            <input id="numeroRetiro" type="number" placeholder="Enter the amount">
+                            <button onclick="cantidadRetiro()" class="btn btn-outline-light"> Withdraw amount </button>
+                            <button onclick="salir()" class=" btn btn-outline-danger"> Log out </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PANEL INICIO CONSULTAR SALDO -->
+            <section id="inicioOperacionSaldo" class="invisible cajacentro container">
+                <div class="padre container">
+                    <h1> 💵 My Code Bank </h1>
+                    <div id="hijoSaldo" class="hijo container">
+                        <h2> Your current balance is:</h2>
+                        <div>
+                            <input id="resultadoSaldo" type="text" disabled readonly>
+                        </div>
+                        <div class="operaciones container">
+                            <button onclick='depositar()' class="btn btn-outline-light"> Add amount </button>
+                            <!--onclick no addeventlistener-->
+                            <button onclick="retirar()" class="btn btn-outline-light"> Withdraw amount </button>
+                            <button onclick="salir()" class=" btn btn-outline-danger"> Log out </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+        <h6> Thanks for using 💵 My Code Bank </h6>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
