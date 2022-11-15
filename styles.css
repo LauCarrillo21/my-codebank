@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
 
 body{
-    font-size: 20px;
+    font-size: 24px;
     font-family:'Quicksand', sans-serif;
-    margin: 0;
-    padding: 0;
+}
+
+h1 {
+    font-size: 20px;
 }
 
 .cajacentro {
@@ -12,12 +14,12 @@ body{
     display: flex;
     flex-direction: center;
     justify-content: center;
-    margin: 12% auto !important;
-    width: 800px;
-    height: 100%;
-    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
-    color: whitesmoke;
-    padding:55px;   
+    margin: 12px auto;
+    width:600px;
+    height:400px;
+    background:linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+    color:#060608;
+    padding:50px;   
     border-radius: 4px;
 }
 
@@ -29,6 +31,7 @@ h5{
     border: 1px solid #112B3C;
     border-radius: 10px;
 }
+
 .invisible{
     display: none;
 }
@@ -47,16 +50,21 @@ h5{
     flex-direction: column;
     justify-items: center;
     align-items: center;
-
 }
+
+.label {
+    font-size: 20px;
+}
+
 .btn{
     margin-top: 15px;
     padding: 10px;
     width: 300px;
     border: none;
     border-radius: 10px;
-    
 }
+
+
 input{
     margin: 15px 0px;
     padding: 5px;
