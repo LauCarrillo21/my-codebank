@@ -47,9 +47,9 @@ function iniciarSesion() {
 
     //Validacion usuario y contraseña
     if (index === -1) {
-        alert('La contraseña y/o el usuario son incorrectos. Verifique sus datos.')
+        alert('The password and/or username are incorrect. Check your data.')
     } else if (contrasena !== cuentas[index].password) {
-        alert('La contraseña y/o el usuario son incorrectos. Verifique sus datos.')
+        alert('The password and/or username are incorrect. Check your data.')
 
     } else {
         inicioDeSesion.classList.add('invisible');
@@ -78,10 +78,10 @@ function depositar() {
 function cantidadDeposito() {
     let valorADepositar = Number(document.getElementById('valorDeposito').value);
     if (valorADepositar === 0) {
-        alert(` ¡¡Intentalo de nuevo!! Para realizar un depósito la cantidad debe ser mayor a $0.00 mxn.`);
+        alert(`Try again! To make a deposit the amount must be greater than $0.00 mxn.`);
     } else if ((cuentas[index].saldo + valorADepositar) > 990) {
         let maximo = 990 - cuentas[index].saldo;
-        alert(`Solo puedes depositar $${maximo}.00 mxn para tener un max. de $990.00 mxn en tu cuenta. `);
+        alert(`You can only deposit $${maximo}.00 mxn to have a max. of $990.00 mxn in your account. `);
     }
     else {
 
@@ -94,7 +94,7 @@ function cantidadDeposito() {
 
         divHijoSaldo = document.getElementById('hijoSaldo')
         depoH5 = document.createElement('h5');
-        texto = document.createTextNode(`Depositaste: $${valorADepositar}.00 mxn`);
+        texto = document.createTextNode(`You added: $${valorADepositar}.00 mxn`);
         depoH5.appendChild(texto);
         divHijoSaldo.prepend(depoH5);
 
@@ -122,11 +122,11 @@ function retirar() {
 function cantidadRetiro() {
     let valorARetirar = Number(document.getElementById('numeroRetiro').value);
     if (valorARetirar === 0) {
-        alert(`¡Sabemos que fue un error! Para realizar un retiro la cantidad debe ser mayor a $0.00 mxn. ¡Intentalo de nuevo ${usuario}!.`)
+        alert(`We know it was a mistake! To make a withdrawal the amount must be greater than $0.00 mxn. Try again ${usuario}!.`)
 
     } else if ((cuentas[index].saldo - valorARetirar) < 10) {
         let minimo = cuentas[index].saldo - 10;
-        alert(`Solo puedes retirar $${minimo}.00 mxn. Recuerda, debes tener un min. de $10.00 mxn en tu cuenta. `)
+        alert(`You can only withdraw $${minimo}.00 mxn. Remember, you must have a min. of $10.00 mxn in your account.`)
     } else {
 
         cuentas[index].saldo = (cuentas[index].saldo - valorARetirar);
@@ -138,7 +138,7 @@ function cantidadRetiro() {
 
         divHijoSaldo = document.getElementById('hijoSaldo')
         retiroH5 = document.createElement('h5');
-        texto = document.createTextNode(`Retiraste: $${valorARetirar}.00 mxn`);
+        texto = document.createTextNode(`You withdrew: $${valorARetirar}.00 mxn`);
         retiroH5.appendChild(texto);
         divHijoSaldo.prepend(retiroH5);
 
@@ -162,7 +162,7 @@ function saldo() {
 }
 //click boton SALIR
 function salir() {
-    alert('Estas saliendo de tu sesión. ¡Te esperamos pronto!');
+    alert('You are exiting your session. We are waiting for you soon!');
 
     inicioDeSesion.classList.add('visible');
     inicioDeSesion.classList.remove('invisible');
