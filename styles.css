@@ -1,21 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
 body{
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .cajacentro {
+    font-family:'Quicksand', sans-serif;
     display: flex;
     flex-direction: center;
     justify-content: center;
     margin: 12% auto !important;
-    width: 600px;
+    width: 800px;
     height: 100%;
     background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
     color: whitesmoke;
-    padding:3%;   
-    border-radius: 9px;
+    padding:55px;   
+    border-radius: 4px;
 }
 
 h5{
@@ -66,4 +69,5 @@ input{
 footer{
     text-align: center;
     color: #112B3C;
+    font-family:'Quicksand', sans-serif;
 }
